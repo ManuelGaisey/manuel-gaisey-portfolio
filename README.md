@@ -1,2 +1,12 @@
-# manuel-gaisey-portfolio
-Cybersecurity portfolio showcasing SOC labs, threat detection projects, and IT support experience. Built with HTML/CSS and hosted on GitHub Pages.
+# Manuel Gaisey Cybersecurity Portfolio
+
+Welcome to my cybersecurity portfolio showcasing hands-on projects in SOC operations, threat detection, and IT systems support.
+
+## Live Website
+(Your GitHub Pages link here)
+
+## Projects
+- SOC Home Lab (SIEM)
+- Brute Force Detection
+- Phishing Analysis
+- Vulnerability Assessment
