@@ -5,6 +5,8 @@ Welcome to my cybersecurity portfolio showcasing hands-on projects in SOC operat
 ## Live Website
 https://manuelgaisey.github.io/manuel-gaisey-portfolio/
 
+https://mcfprep2soar.thinkific.com/certificates/0vebmj2y0f
+
 ## Projects
 - SOC Home Lab (SIEM)
 - Brute Force Detection
