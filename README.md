@@ -3,7 +3,7 @@
 Welcome to my cybersecurity portfolio showcasing hands-on projects in SOC operations, threat detection, and IT systems support.
 
 ## Live Website
-(Your GitHub Pages link here)
+https://manuelgaisey.github.io/manuel-gaisey-portfolio/
 
 ## Projects
 - SOC Home Lab (SIEM)
