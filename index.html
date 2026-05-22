@@ -3,99 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Gaisey | Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Manuel Joe Sam Acquah Gaisey | Cybersecurity Portfolio</title>
+    <style>
+        /* Modern CSS Variables for easy color adjustments */
+        :root {
+            --bg-dark: #0B132B;       /* Deep Midnight Blue */
+            --bg-card: #1C2541;       /* Dark Tech Blue for cards */
+            --accent-gold: #FFC107;   /* Cyber Gold/Yellow */
+            --text-light: #F8F9FA;    /* Off-white read text */
+            --text-muted: #9A9EAB;    /* Soft grey for descriptive subtext */
+            --border-glow: #3A506B;   /* Subtle tech border */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* --- Header Section --- */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- Project Grid Layout --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-gold);
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .project-tags {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- Button Component Layout --- */
+        .project-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: #e0a800;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border-glow);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-light);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- Lists Styling (Certifications) --- */
+        .cert-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        @media(min-width: 600px) {
+            .cert-list { grid-template-columns: 1fr 1fr; }
+        }
+
+        .cert-item {
+            background-color: var(--bg-card);
+            border-left: 3px solid var(--accent-gold);
+            padding: 14px 20px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+        }
+
+        /* --- Contact Component --- */
+        .contact-info {
+            background-color: var(--bg-card);
+            border: 1px dashed var(--border-glow);
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        
+        .contact-info strong {
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Manuel Joe Sam Acquah Gaisey</h1>
-    <p>Cybersecurity Analyst | IT Support | SOC | Azure | Data Annotation</p> 
-</header>
+    <div class="container">
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am an IT professional with experience in cybersecurity operations, IT support,
-        and data systems. I have worked in security monitoring, incident response,
-        and system troubleshooting, with a strong focus on building secure environments.
-    </p> 
-</section> 
+        <header>
+            <h1>Manuel Joe Sam Acquah Gaisey</h1>
+            <p>Cybersecurity & IT Systems Professional</p>
+        </header>
 
-<section> 
-    <h2>Skills</h2> 
-    <ul> 
-        <li>Cybersecurity Operations</li> 
-        <li>SIEM (Splunk)</li>
-        <li>Network Security</li>
-        <li>Azure & Intune</li>
-        <li>Incident Response</li>
-        <li>IT Support & Troubleshooting</li>
-    </ul> 
-</section> 
+        <section id="projects">
+            <h2>🛡️ Core Projects</h2>
+            <div class="project-grid">
 
-<section> 
-    <h2>Projects</h2> 
+                <div class="project-card">
+                    <h3>Botium Toys: Internal Security Audit</h3>
+                    <p class="project-tags">NIST CSF | PCI DSS | GDPR | RISK ASSESSMENT</p>
+                    <p class="project-description">
+                        An internal security audit mapping technical vulnerabilities, identity governance gaps, and administrative controls against the NIST Cybersecurity Framework. Developed clear, compliance-driven remediation pathways for PCI DSS, GDPR, and SOC alignment.
+                    </p>
+                    <div class="project-links">
+                        <a href="./Assets/Botium_Toys_Security_Audit.pdf" target="_blank" class="btn btn-primary">👁️ View PDF Report</a>
+                        <a href="./Assets/Botium_Toys_Security_Audit.docx" download class="btn btn-secondary">📥 Download DOCX</a>
+                    </div>
+                </div>
 
-    <div class="project"> 
-        <h3>SOC Home Lab (SIEM)</h3>
-        <p>Built a SOC lab using Splunk to monitor and analyze security logs.</p>
-        <a href="https://manuelgaisey.github.io/manuel-gaisey-portfolio/">View Project</a>
+                <div class="project-card">
+                    <h3>Brute Force Detection Analysis</h3>
+                    <p class="project-tags">SIEM | WINDOWS EVENT LOGS | SECURITY MONITORING</p>
+                    <p class="project-description">
+                        Monitored, analyzed, and logged malicious authentication tracking anomalies and repeated failed login vectors utilizing security auditing metrics on Windows infrastructure.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">View Project Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Phishing Email Analysis</h3>
+                    <p class="project-tags">INCIDENT RESPONSE | EMAIL FORENSICS | THREAT ANALYSIS</p>
+                    <p class="project-description">
+                        Evaluated suspect email artifacts, structural headers, and routing sequences to intercept malicious tracking vectors and mitigate domain risk exposure.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">View Project Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>🏆 Technical Certifications</h2>
+            <ul class="cert-list">
+                <li class="cert-item">Prep2Soar – Mastercard Foundation</li>
+                <li class="cert-item">Microsoft SOC Training</li>
+                <li class="cert-item">Cybersecurity Internship – Edureka</li>
+                <li class="cert-item">CompTIA A+ Training – Slamm Technologies</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>✉️ Contact & Connection</h2>
+            <div class="contact-info">
+                Interested in collaboration or open positions? Let's connect professionally. Email me directly at: <strong>manuel.jsa.gaisey@gmail.com</strong>
+            </div>
+        </section>
+
     </div>
-
-    <div class="project">
-        <h3>Brute Force Detection</h3>
-        <p>Detected failed login attempts using Windows Event Logs.</p>
-        <a href="#">View Project</a>
-    </div>
-
-    <div class="project">
-        <h3>Phishing Email Analysis</h3>
-        <p>Analyzed phishing email headers and malicious links.</p>
-        <a href="#">View Project</a>
-    </div>
-
-    <!-- Cybersecurity Project: Botium Toys Audit -->
-<div class="project-card">
-    <h3>🛡️ Botium Toys: Internal Security Audit</h3>
-    <p class="project-tags">NIST CSF | PCI DSS | GDPR | Risk Assessment</p>
-    
-    <p class="project-description">
-        An internal security audit mapping technical vulnerabilities, identity governance gaps, 
-        and administrative controls against the NIST Cybersecurity Framework. Developed compliance 
-        remediation pathways for PCI DSS, GDPR, and SOC 1/SOC 2 alignment.
-    </p>
-    
-    <div class="project-links">
-        <!-- Direct Link to View the PDF in Browser -->
-        <a href="./Assets/Botium_Toys_Security_Audit.pdf" target="_blank" class="btn">👁️ View PDF Report</a>
-        
-        <!-- Direct Link to Download the Styled Word Document -->
-        <a href="./Assets/Botium_Toys_Security_Audit.docx" download class="btn btn-secondary">📥 Download DOCX</a>
-    </div>
-</div>
-
-</section>
-
-<section>
-    <h2>Certifications</h2>
-    <ul>
-        <li>Prep2Soar – Mastercard Foundation</li>
-        <li>Microsoft SOC Training</li>
-        <li>Cybersecurity Internship – Edureka</li>
-        <li>CompTIA A+ Training – Slamm Technologies</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: manuelscketche@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/manuelgaisey">View Profile</a></p>
-</section>
-
-<footer>
-    <p>© 2026 Manuel Gaisey</p>
-</footer>
 
 </body>
 </html>
