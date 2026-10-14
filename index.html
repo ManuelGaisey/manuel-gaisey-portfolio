@@ -1,282 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Joe Sam Acquah Gaisey | Cybersecurity Portfolio</title>
-    <style>
-        /* Modern CSS Variables for easy color adjustments */
-        :root {
-            --bg-dark: #0B132B;       /* Deep Midnight Blue */
-            --bg-card: #1C2541;       /* Dark Tech Blue for cards */
-            --accent-gold: #FFC107;   /* Cyber Gold/Yellow */
-            --text-light: #F8F9FA;    /* Off-white read text */
-            --text-muted: #9A9EAB;    /* Soft grey for descriptive subtext */
-            --border-glow: #3A506B;   /* Subtle tech border */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuel Joe Sam Acquah Gaisey | Cybersecurity Portfolio</title>
+<style>
+:root{--bg-dark:#0B132B;--bg-card:#1C2541;--accent-gold:#FFC107;--text-light:#F8F9FA;--text-muted:#9A9EAB;--border-glow:#3A506B}
+:root[data-theme="light"]{--bg-dark:#F4F6FA;--bg-card:#FFFFFF;--accent-gold:#B07A00;--text-light:#0B132B;--text-muted:#505870;--border-glow:#C9D1E0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg-dark);color:var(--text-light);font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;padding:0 20px 40px}
+.container{max-width:950px;margin:0 auto}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* Sticky nav */
+nav{position:sticky;top:0;z-index:50;background:var(--bg-dark);border-bottom:1px solid var(--border-glow);margin:0 -20px 40px;padding:12px 20px}
+nav .inner{max-width:950px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+nav a{color:var(--text-muted);text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+nav a:hover,nav a.active{color:var(--accent-gold)}
+#themeBtn{margin-left:auto;background:none;border:1px solid var(--border-glow);color:var(--text-light);border-radius:4px;padding:5px 10px;cursor:pointer;font-size:.85rem}
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
+header{text-align:center;margin-bottom:40px;padding-bottom:30px;border-bottom:1px solid var(--border-glow)}
+header h1{font-size:2.5rem;margin-bottom:8px;letter-spacing:.5px}
+header p.role{color:var(--accent-gold);font-size:1.1rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;min-height:1.7em}
+.stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:24px}
+.stat{background:var(--bg-card);border:1px solid var(--border-glow);border-radius:8px;padding:10px 22px}
+.stat b{display:block;font-size:1.6rem;color:var(--accent-gold)}
+.stat span{font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px}
 
-        .container {
-            max-width: 950px;
-            margin: 0 auto;
-        }
+section{margin-bottom:50px}
+h2{font-size:1.6rem;color:var(--accent-gold);margin-bottom:25px;text-transform:uppercase;letter-spacing:.5px}
 
-        /* --- Header Section --- */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border-glow);
-        }
+/* Skills */
+.skill-group{margin-bottom:18px}
+.skill-group h4{font-size:.85rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--bg-card);border:1px solid var(--border-glow);border-radius:999px;padding:5px 14px;font-size:.85rem}
 
-        header h1 {
-            font-size: 2.5rem;
-            color: var(--text-light);
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
-        }
+/* Projects */
+.project-grid{display:grid;grid-template-columns:1fr;gap:25px}
+.project-card{background:var(--bg-card);border:1px solid var(--border-glow);border-radius:8px;padding:25px;transition:transform .2s,box-shadow .2s}
+.project-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.25);border-color:var(--accent-gold)}
+.project-card h3{font-size:1.3rem;margin-bottom:6px}
+.project-tags{font-size:.85rem;color:var(--accent-gold);font-weight:600;margin-bottom:14px;letter-spacing:.5px}
+.project-description{color:var(--text-muted);font-size:.95rem;margin-bottom:20px}
+.project-links{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;font-size:.9rem;font-weight:600;border-radius:4px;text-decoration:none;transition:all .2s;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--accent-gold);color:#0B132B;border:1px solid var(--accent-gold)}
+.btn-primary:hover{filter:brightness(.9)}
+.btn-secondary{background:transparent;color:var(--text-light);border:1px solid var(--border-glow)}
+.btn-secondary:hover{border-color:var(--text-light)}
 
-        header p {
-            color: var(--accent-gold);
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+/* Certs */
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.filter{background:transparent;border:1px solid var(--border-glow);color:var(--text-light);padding:6px 14px;border-radius:999px;cursor:pointer;font-size:.85rem;font-family:inherit}
+.filter.on{background:var(--accent-gold);color:#0B132B;border-color:var(--accent-gold);font-weight:600}
+#search{flex:1;min-width:180px;background:var(--bg-card);border:1px solid var(--border-glow);color:var(--text-light);padding:7px 14px;border-radius:999px;font-family:inherit}
+.cert-list{list-style:none;display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:600px){.cert-list{grid-template-columns:1fr 1fr}}
+.cert-item{background:var(--bg-card);border-left:3px solid var(--accent-gold);padding:14px 20px;border-radius:0 6px 6px 0;font-size:.95rem}
+.cert-item[hidden]{display:none}
+#noResults{color:var(--text-muted);margin-top:10px}
 
-        /* --- Section Styling --- */
-        section {
-            margin-bottom: 50px;
-        }
+/* Contact */
+.contact-info{background:var(--bg-card);border:1px dashed var(--border-glow);padding:20px;border-radius:6px;font-size:.95rem;color:var(--text-muted)}
+.email-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.email-row strong{color:var(--text-light)}
+.copy{font-size:.8rem;padding:4px 10px}
 
-        h2 {
-            font-size: 1.6rem;
-            color: var(--accent-gold);
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- Project Grid Layout --- */
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-        }
-
-        .project-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-glow);
-            border-radius: 8px;
-            padding: 25px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            border-color: var(--accent-gold);
-        }
-
-        .project-card h3 {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            margin-bottom: 6px;
-        }
-
-        .project-tags {
-            font-size: 0.85rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-bottom: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        .project-description {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        /* --- Button Component Layout --- */
-        .project-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 18px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-gold);
-            color: var(--bg-dark);
-        }
-
-        .btn-primary:hover {
-            background-color: #e0a800;
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-light);
-            border: 1px solid var(--border-glow);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-light);
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        /* --- Lists Styling (Certifications) --- */
-        .cert-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
-
-        @media(min-width: 600px) {
-            .cert-list { grid-template-columns: 1fr 1fr; }
-        }
-
-        .cert-item {
-            background-color: var(--bg-card);
-            border-left: 3px solid var(--accent-gold);
-            padding: 14px 20px;
-            border-radius: 0 6px 6px 0;
-            font-size: 0.95rem;
-        }
-
-        /* --- Contact Component --- */
-        .contact-info {
-            background-color: var(--bg-card);
-            border: 1px dashed var(--border-glow);
-            padding: 20px;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-        
-        .contact-info strong {
-            color: var(--text-light);
-        }
-    </style>
+/* Back to top + reveal */
+#top{position:fixed;right:20px;bottom:20px;width:42px;height:42px;border-radius:50%;border:none;background:var(--accent-gold);color:#0B132B;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+#top.show{opacity:1;pointer-events:auto}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
+<nav><div class="inner">
+  <a href="#about">Home</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#courses">Courses</a><a href="#contact">Contact</a>
+  <button id="themeBtn" aria-label="Toggle theme">☀️ / 🌙</button>
+</div></nav>
 
-    <div class="container">
+<div class="container">
+<header id="about">
+  <h1>Manuel Joe Sam Acquah Gaisey</h1>
+  <p class="role" id="role">Cybersecurity &amp; IT Systems Professional</p>
+  <div class="stats">
+    <div class="stat"><b id="statCerts">0</b><span>Certifications</span></div>
+    <div class="stat"><b id="statProj">0</b><span>Core Projects</span></div>
+    <div class="stat"><b id="statCourses">0</b><span>Courses</span></div>
+  </div>
+</header>
 
-        <header>
-            <h1>Manuel Joe Sam Acquah Gaisey</h1>
-            <p>Cybersecurity & IT Systems Professional</p>
-        </header>
+<section id="skills" class="reveal">
+  <h2>🧰 Skills &amp; Frameworks</h2>
+  <div class="skill-group"><h4>Frameworks &amp; Compliance</h4><div class="chips"><span class="chip">NIST CSF</span><span class="chip">PCI DSS</span><span class="chip">GDPR</span><span class="chip">SOC</span><span class="chip">Risk Assessment</span></div></div>
+  <div class="skill-group"><h4>Security Operations</h4><div class="chips"><span class="chip">SIEM</span><span class="chip">Windows Event Logs</span><span class="chip">Security Monitoring</span><span class="chip">Incident Response</span></div></div>
+  <div class="skill-group"><h4>Analysis &amp; IT</h4><div class="chips"><span class="chip">Email Forensics</span><span class="chip">Threat Analysis</span><span class="chip">Data Analytics</span><span class="chip">Hardware &amp; Support (A+)</span></div></div>
+</section>
 
-        <section id="projects">
-            <h2>🛡️ Core Projects</h2>
-            <div class="project-grid">
-
-                <div class="project-card">
-                    <h3>Botium Toys: Internal Security Audit</h3>
-                    <p class="project-tags">NIST CSF | PCI DSS | GDPR | RISK ASSESSMENT</p>
-                    <p class="project-description">
-                        An internal security audit mapping technical vulnerabilities, identity governance gaps, and administrative controls against the NIST Cybersecurity Framework. Developed clear, compliance-driven remediation pathways for PCI DSS, GDPR, and SOC alignment.
-                    </p>
-                    <div class="project-links">
-                        <a href="./Assets/Botium_Toys_Security_Audit.pdf" target="_blank" class="btn btn-primary">👁️ View PDF Report</a>
-                        <a href="./Assets/Botium_Toys_Security_Audit.docx" download class="btn btn-secondary">📥 Download DOCX</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Brute Force Detection Analysis</h3>
-                    <p class="project-tags">SIEM | WINDOWS EVENT LOGS | SECURITY MONITORING</p>
-                    <p class="project-description">
-                        Monitored, analyzed, and logged malicious authentication tracking anomalies and repeated failed login vectors utilizing security auditing metrics on Windows infrastructure.
-                    </p>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-secondary">View Project Details</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Phishing Email Analysis</h3>
-                    <p class="project-tags">INCIDENT RESPONSE | EMAIL FORENSICS | THREAT ANALYSIS</p>
-                    <p class="project-description">
-                        Evaluated suspect email artifacts, structural headers, and routing sequences to intercept malicious tracking vectors and mitigate domain risk exposure.
-                    </p>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-secondary">View Project Details</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="certifications">
-            <h2>🏆 Technical Certifications</h2>
-            <ul class="cert-list">
-                <li class="cert-item">Mastercard Foundation Public Speaking : Speaking with Confidence - Baobab</li>
-                <li class="cert-item">Mastercard Foundation How To Make Your Point In 1Min or Less - Baobab</li>
-                <li class="cert-item">Mastercard Foundation Intro to Generative AI - Baobab</li>
-                <li class="cert-item">Mastercard Foundation Seeing Prblem as Opportunities – Baobab</li>
-                <li class="cert-item">Mastercard Foundation Intro to Business Models – Baobab</li>
-                <li class="cert-item">Mastercard Foundation Building a Professional Digital Profile – Baobab</li>
-                 <li class="cert-item">Google Cybersecurity Risk Management – Coursera</li>
-                <li class="cert-item">Google Cybersecurity Foundations – Coursera</li>
-                <li class="cert-item">Data Analytics Beginner’s Course – BeTechified</li>
-                <li class="cert-item">Mastercard Foundation – Prep2Soar Associates Program</li>
-                <li class="cert-item">Microsoft – Student SOC Program Foundations Training</li>
-                <li class="cert-item">Mastercard Cybersecurity Virtual Experience Program – Forage</li>
-                <li class="cert-item">Cybersecurity & Ethical Hacking Internship – Edureka</li>
-                <li class="cert-item">CompTIA A+ Training – Slamm Technologies</li>
-            </ul>
-        </section>
-
-<section id="Participated Courses">
-            <h2>📚 Participated Courses</h2>
-            <ul class="cert-list">
-                <li class="cert-item">Making Sense of Mental Health Problems – The Open University</li>
-                <li class="cert-item">Delegate | FutureWorks – World Bank Youth Summit</li>
-                <li class="cert-item">Foundations of Modern Technology – Improtech Training Centre</li>
-              </ul>
-        </section>    
-            
-        <section id="contact">
-            <h2>✉️ Contact & Connection</h2>
-            <div class="contact-info">
-                Interested in collaboration or open positions? Let's connect professionally. Email me directly at: <strong>manuel.jsa.gaisey@gmail.com / manuelscketche@gmail.com</strong>
-            </div>
-        </section>
-
+<section id="projects" class="reveal">
+  <h2>🛡️ Core Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Botium Toys: Internal Security Audit</h3>
+      <p class="project-tags">NIST CSF | PCI DSS | GDPR | RISK ASSESSMENT</p>
+      <p class="project-description">An internal security audit mapping technical vulnerabilities, identity governance gaps, and administrative controls against the NIST Cybersecurity Framework. Developed clear, compliance-driven remediation pathways for PCI DSS, GDPR, and SOC alignment.</p>
+      <div class="project-links">
+        <a href="./Assets/Botium_Toys_Security_Audit.pdf" target="_blank" rel="noopener" class="btn btn-primary">👁️ View PDF Report</a>
+        <a href="./Assets/Botium_Toys_Security_Audit.docx" download class="btn btn-secondary">📥 Download DOCX</a>
+      </div>
     </div>
+    <div class="project-card">
+      <h3>Brute Force Detection Analysis</h3>
+      <p class="project-tags">SIEM | WINDOWS EVENT LOGS | SECURITY MONITORING</p>
+      <p class="project-description">Monitored, analyzed, and logged malicious authentication tracking anomalies and repeated failed login vectors utilizing security auditing metrics on Windows infrastructure.</p>
+      <div class="project-links"><a href="#" class="btn btn-secondary">View Project Details</a></div>
+    </div>
+    <div class="project-card">
+      <h3>Phishing Email Analysis</h3>
+      <p class="project-tags">INCIDENT RESPONSE | EMAIL FORENSICS | THREAT ANALYSIS</p>
+      <p class="project-description">Evaluated suspect email artifacts, structural headers, and routing sequences to intercept malicious tracking vectors and mitigate domain risk exposure.</p>
+      <div class="project-links"><a href="#" class="btn btn-secondary">View Project Details</a></div>
+    </div>
+  </div>
+</section>
 
+<section id="certifications" class="reveal">
+  <h2>🏆 Technical Certifications</h2>
+  <div class="controls">
+    <button class="filter on" data-f="all">All</button>
+    <button class="filter" data-f="cyber">Cybersecurity</button>
+    <button class="filter" data-f="it">IT &amp; Data</button>
+    <button class="filter" data-f="pro">Professional Skills</button>
+    <input id="search" type="search" placeholder="Search certifications…" aria-label="Search certifications">
+  </div>
+  <ul class="cert-list" id="certList">
+    <li class="cert-item" data-cat="pro">Mastercard Foundation Public Speaking: Speaking with Confidence – Baobab</li>
+    <li class="cert-item" data-cat="pro">Mastercard Foundation How To Make Your Point In 1Min or Less – Baobab</li>
+    <li class="cert-item" data-cat="it">Mastercard Foundation Intro to Generative AI – Baobab</li>
+    <li class="cert-item" data-cat="pro">Mastercard Foundation Seeing Problems as Opportunities – Baobab</li>
+    <li class="cert-item" data-cat="pro">Mastercard Foundation Intro to Business Models – Baobab</li>
+    <li class="cert-item" data-cat="pro">Mastercard Foundation Building a Professional Digital Profile – Baobab</li>
+    <li class="cert-item" data-cat="cyber">Google Cybersecurity Risk Management – Coursera</li>
+    <li class="cert-item" data-cat="cyber">Google Cybersecurity Foundations – Coursera</li>
+    <li class="cert-item" data-cat="it">Data Analytics Beginner’s Course – BeTechified</li>
+    <li class="cert-item" data-cat="pro">Mastercard Foundation – Prep2Soar Associates Program</li>
+    <li class="cert-item" data-cat="cyber">Microsoft – Student SOC Program Foundations Training</li>
+    <li class="cert-item" data-cat="cyber">Mastercard Cybersecurity Virtual Experience Program – Forage</li>
+    <li class="cert-item" data-cat="cyber">Cybersecurity &amp; Ethical Hacking Internship – Edureka</li>
+    <li class="cert-item" data-cat="it">CompTIA A+ Training – Slamm Technologies</li>
+  </ul>
+  <p id="noResults" hidden>No certifications match your search.</p>
+</section>
+
+<section id="courses" class="reveal">
+  <h2>📚 Participated Courses</h2>
+  <ul class="cert-list" id="courseList">
+    <li class="cert-item">Making Sense of Mental Health Problems – The Open University</li>
+    <li class="cert-item">Delegate | FutureWorks – World Bank Youth Summit</li>
+    <li class="cert-item">Foundations of Modern Technology – Improtech Training Centre</li>
+  </ul>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>✉️ Contact &amp; Connection</h2>
+  <div class="contact-info">
+    Interested in collaboration or open positions? Let's connect professionally.
+    <div class="email-row"><strong>manuel.jsa.gaisey@gmail.com</strong>
+      <a class="btn btn-primary copy" href="mailto:manuel.jsa.gaisey@gmail.com">Email</a>
+      <button class="btn btn-secondary copy" data-copy="manuel.jsa.gaisey@gmail.com">Copy</button></div>
+    <div class="email-row"><strong>manuelscketche@gmail.com</strong>
+      <a class="btn btn-primary copy" href="mailto:manuelscketche@gmail.com">Email</a>
+      <button class="btn btn-secondary copy" data-copy="manuelscketche@gmail.com">Copy</button></div>
+  </div>
+</section>
+</div>
+
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+// Animated counters
+function count(id,n){var el=document.getElementById(id),i=0,s=Math.max(1,Math.ceil(n/20));var t=setInterval(function(){i=Math.min(n,i+s);el.textContent=i;if(i>=n)clearInterval(t)},40)}
+count('statCerts',document.querySelectorAll('#certList .cert-item').length);
+count('statProj',document.querySelectorAll('.project-card').length);
+count('statCourses',document.querySelectorAll('#courseList .cert-item').length);
+
+// Typing role effect
+(function(){var roles=['Cybersecurity & IT Systems Professional','SOC & Security Monitoring Enthusiast','Risk & Compliance Analyst'],el=document.getElementById('role');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var r=0,c=roles[0].length,del=true;
+setInterval(function(){var w=roles[r];
+if(del){c--;if(c<=0){del=false;r=(r+1)%roles.length}}else{c++;if(c>=roles[r].length)del=true}
+el.textContent=roles[r].slice(0,c)||'\u00a0'},70)})();
+
+// Cert filter + search
+var cur='all',items=[].slice.call(document.querySelectorAll('#certList .cert-item'));
+function apply(){var q=document.getElementById('search').value.toLowerCase(),shown=0;
+items.forEach(function(li){var ok=(cur==='all'||li.dataset.cat===cur)&&li.textContent.toLowerCase().indexOf(q)>-1;li.hidden=!ok;if(ok)shown++});
+document.getElementById('noResults').hidden=shown>0}
+document.querySelectorAll('.filter').forEach(function(b){b.onclick=function(){document.querySelectorAll('.filter').forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur=b.dataset.f;apply()}});
+document.getElementById('search').oninput=apply;
+
+// Copy email
+document.querySelectorAll('[data-copy]').forEach(function(b){b.onclick=function(){
+(navigator.clipboard?navigator.clipboard.writeText(b.dataset.copy):Promise.reject()).then(function(){b.textContent='Copied ✓'}).catch(function(){b.textContent='Select & copy'});
+setTimeout(function(){b.textContent='Copy'},1800)}});
+
+// Theme toggle
+var root=document.documentElement;
+try{var saved=localStorage.getItem('theme');if(saved)root.dataset.theme=saved}catch(e){}
+document.getElementById('themeBtn').onclick=function(){var t=root.dataset.theme==='light'?'dark':'light';root.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}};
+
+// Back to top, nav highlight, reveal
+var topBtn=document.getElementById('top');
+window.addEventListener('scroll',function(){topBtn.classList.toggle('show',scrollY>400)});
+topBtn.onclick=function(){scrollTo({top:0})};
+var links=[].slice.call(document.querySelectorAll('nav a'));
+var secs=['about','skills','projects','certifications','courses','contact'];
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.1});
+ document.querySelectorAll('.reveal').forEach(function(s){io.observe(s)});
+ var nav=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-40% 0px -55% 0px'});
+ secs.forEach(function(id){nav.observe(document.getElementById(id))});
+}else{document.querySelectorAll('.reveal').forEach(function(s){s.classList.add('in')})}
+</script>
 </body>
 </html>
